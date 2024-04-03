@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Perfume - AlSharq Perfumes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css_folder/add.css">
+    <style>
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../media_folder/logo.jpg" alt="Perfume Alsharq Logo" width="50" height="50" style="border-radius: 20%;">
+            </a>           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/perfumes">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/add">add new perfume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact-us">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">LogIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reg">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="add-perfume" id="add-perfume">
+    <div class="container">
+        <h1 class="heading"><span>Add New</span> Perfume</h1>
+        <form enctype="multipart/form-data" action="/addPerfume" method="post" id="perfumeForm"> 
+            <div class="form-group">
+                <label for="perfumeName">Perfume Name</label>
+                <input type="text" class="form-control" id="perfumeName" name="perfumeName" placeholder="Enter perfume name" >
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="Enter price" >
+            </div>
+            <div class="form-group">
+                <label for="reviews">Reviews</label>
+                <input type="number" class="form-control" id="reviews" name="reviews" placeholder="Enter number of reviews" >
+            </div>
+            <div class="form-group">
+                <label for="perfumeType">Perfume Type</label>
+                <select class="form-control" id="perfumeType" name="perfumeType" >
+                    <option value="men">For Men</option>
+                    <option value="women">For Women</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="perfumeImage">Perfume Image</label>
+                <input type="file" class="form-control-file" id="perfumeImage" name="perfumeImage" accept="image/*" required>
+            </div>
+            <input type="hidden" id="usernameInput" name="username" value="">
+
+            <button type="submit" class="btn btn-primary">Add Perfume</button>
+        </form>
+    </div>
+</section>
+
+
+  
+
+<div id="validationPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeValidationPopup()"></span>
+            <p id="validationMessage" style="color: red;"></p>
+        </div>
+    </div>
+
+    <div id="successPopup" class="popup success">
+        <div class="popup-content">
+            <span class="close" onclick="closeSuccessPopup()"></span>
+            <p id="successMessage" style="color: green;"></p>
+        </div>
+    </div>
+<script src="../js_folder/add.js"></script>
+
+
+  
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="logo">AL<span>Sharq</span></a>
+                    <div class="social">
+                        <a href="https://github.com/Wrood1"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Page</h3>
+                    <a href="#home">Home</a>
+                    <a href="products.html#Men's">Men's perfumes</a>
+                    <a href="products.html#Women's">Women's perfumes</a>
+                    <a href="#">Sales</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="col-md-2">
+                    <h3>Contact</h3>
+                    <p>United States</p>
+                    <p>KSA</p>
+                    <p>Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright text-center">
+        <p>@AlSharq All Right Reserved</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

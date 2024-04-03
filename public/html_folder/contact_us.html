@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='../css_folder/contact_us.css' rel='stylesheet'>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../media_folder/logo.jpg" alt="Perfume Alsharq Logo" width="50" height="50" style="border-radius: 20%;">
+            </a>           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/perfumes">Home</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/add">add new perfume</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/contact-us">Contact Us</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">LogIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reg">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="order" id="order">
+        <h1 class="heading"><span>Contact</span> Us</h1>
+        <div class="row">
+            <div class="image">
+                <img src="../media_folder/about.jpg" alt="">
+            </div>
+            <form method="post" action="/addContact" id="contactForm">
+                <div class="inputbox">
+                    <input type="text" placeholder="First Name" name="firstName" id="firstName" required>
+                    <input type="text" placeholder="Last Name" name="lastName" id="lastName" required>
+                </div>
+                <div class="inputbox">
+                    <input type="number" placeholder="Mobile" name="mobile" id="mobile" required>
+                    <input type="text" placeholder="Date of Birth" name="dateOfBirth" id="dateOfBirth" required>
+                </div>
+            
+                <div class="inputbo">
+                    <h3>Gender</h3>
+                    <select name="gender" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <br><br>
+                </div>
+            
+                <div class="inputbo">
+                    <h3>Language</h3>
+                    <select name="language" id="language" required>
+                        <option value="arabic">Arabic</option>
+                        <option value="english">English</option>
+                        <option value="french">French</option>
+                    </select>
+                </div>
+            
+                <textarea placeholder="Message" name="message" id="TA" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+            
+            
+        </div>
+    </section>
+ 
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="logo">AL<span>Sharq</span></a>
+                    <div class="social">
+                        <a href="https://github.com/Wrood1"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Page</h3>
+                    <a href="#home">Home</a>
+                    <a href="products.html#Men's">Men's perfumes</a>
+                    <a href="products.html#Women's">Women's perfumes</a>
+                    <a href="#">Sales</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="col-md-2">
+                    <h3>Contact</h3>
+                    <p>United States</p>
+                    <p>KSA</p>
+                    <p>Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<div id="validationPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeValidationPopup()"></span>
+        <p id="validationMessage" style="color: red;"></p>
+    </div>
+</div>
+
+<div id="successPopup" class="popup success">
+    <div class="popup-content">
+        <span class="close" onclick="closeSuccessPopup()"></span>
+        <p id="successMessage" style="color: green;"></p>
+    </div>
+</div>
+<script src="../js_folder/add.js"></script>
+
+    <div class="copyright text-center">
+        <p>@AlSharq All Right Reserved</p>
+    </div>
+   
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css_folder/signup.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="signupError" class="error">
+            <%= error %>
+        </div>
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post">
+            <input type="text" placeholder="Your Email here" name="email" required>
+            <input type="text" placeholder="Your Name here" name="name" required>
+            <input type="password" placeholder="Your password here" name="password" required>
+            <input type="password" placeholder="confirm Your password here" name="conpassword" required>
+            <button type="submit" name="signup">Sign Up</button>
+        </form>
+
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Remember Me</label>
+        </div>
+
+        <div class="member">
+            Already a member? <a href="/login">Login Here</a>
+        </div>
+    </div>
+    <script src="../js_folder/signup.js">
+      
+    </script>
+</body>
+</html>
